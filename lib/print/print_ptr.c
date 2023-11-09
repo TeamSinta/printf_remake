@@ -6,7 +6,19 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/09 14:53:21 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/09 14:53:22 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/09 15:12:27 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ptr_len(int *num)
+{
+	int	len;
+
+	len = 0;
+	while (num != 0)
+	{
+		num /= 16;
+		len++;
+	}
+	return (len);
+}
