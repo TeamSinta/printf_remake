@@ -6,12 +6,20 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/09 16:09:12 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/09 16:36:12 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/09 17:49:56 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
+
+
+/**
+* @notice	This function counts the lenght of an unsigned integer number converted
+*			into a hexadecimal.
+* @param	unsigned_int		The unsigned integer number to convert in
+*								hexadecimal.
+* @return	int					The lenght of characters of the hexadecimal number.
+*/
 
 int	hex_len(unsigned int num)
 {
@@ -26,6 +34,14 @@ int	hex_len(unsigned int num)
 	return (len);
 }
 
+/**
+* @notice	This function converts an unsigned integer number into hexadecimal.
+* @param	unsigned_int		The unsigned integer number to convert in
+*								hexadecimal.
+* @param	const_char			The conversion needed ('x' for lowercase and 'X'
+*								for uppercase).
+* @return	void				No return value needed now.
+*/
 void	put_hex(unsigned int num, const char conversion)
 {
 	if (num >= 16)
@@ -43,6 +59,15 @@ void	put_hex(unsigned int num, const char conversion)
 }
 
 
+/**
+* @notice	This function checks an unsigned integer number, converts it into
+*			hexadecimal, prints it and counts its lenght.
+* @param	unsigned_int		The unsigned integer number to convert in
+*								hexadecimal.
+* @param	const_char			The conversion needed ('x' for lowercase and 'X'
+*								for uppercase).
+* @return	int					The lenght of characters of the hexadecimal number.
+*/
 int	print_hex(unsigned int num, const char conversion)
 {
 	if (num == 0)
