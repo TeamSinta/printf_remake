@@ -6,7 +6,7 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/09 14:53:21 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/09 16:08:49 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/09 16:22:23 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 * @return	int					The lenght of characters of the pointer.
 */
 
-int	ptr_len(unsigned int *num)
+int	ptr_len(unsigned long num)
 {
 	int	len;
 
@@ -37,7 +37,7 @@ int	ptr_len(unsigned int *num)
 * @return	void				No return value needed now.
 */
 
-void	put_ptr(unsigned int *num)
+void	put_ptr(unsigned long num)
 {
 	if (num >= 16)
 	{
