@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_print.h                                         :+:    :+:            */
+/*   ft_printf.h                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/13 18:00:18 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/13 18:00:47 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/13 18:30:35 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ int			print_nbr(int num);
 int			print_ptr(unsigned long long ptr);
 int			print_str(char *str);
 int			print_unsigned(unsigned int i);
-
 
 #endif
