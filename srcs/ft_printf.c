@@ -6,12 +6,13 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/01 12:08:05 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/13 16:11:02 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/13 18:29:05 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
 #include "ft_printf.h"
+#include "libft.h"
 
 int	arg_conversion(va_list args, const char conversion)
 {
@@ -53,7 +54,7 @@ int	ft_printf(const char *str, ...)
 		}
 		else
 		{
-			ft_putchar_fd(str[i], i);
+			ft_putchar_fd(str[i], 1);
 			len++;
 		}
 		i++;
@@ -61,3 +62,33 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (len);
 }
+
+// int main() {
+//     // Test cases for ft_printf with limited format specifiers
+//     printf("Test Case 1 - ft_printf: %d, printf: %d\n", 
+// 			ft_printf("Hello, World!\n"), printf("Hello, World!\n"));
+//     printf("Test Case 2 - ft_printf: %d, printf: %d\n", 
+// 			ft_printf("This is a number: %d\n", 42), 
+				// printf("This is a number: %d\n", 42));
+//     printf("Test Case 3 - ft_printf: %d, printf: %d\n", 
+// 			ft_printf("String: %s\n", "success"), 
+			// printf("String: %s\n", "success"));
+//     printf("Test Case 4 - ft_printf: %d, printf: %d\n", 
+// 			ft_printf("Pointer: %p\n", (void *)0x12345678), 
+
+			// printf("Pointer: %p\n", (void *)0x12345678));
+//     printf("Test Case 5 - ft_printf: %d, printf: %d\n", 
+// 			ft_printf("Decimal: %d\n", 123), printf("Decimal: %d\n", 123));
+//     printf("Test Case 6 - ft_printf: %d, printf: %d\n", 
+// 			ft_printf("Unsigned: %u\n", 456), printf("Unsigned: %u\n", 456));
+//     printf("Test Case 7 - ft_printf: %d, printf: %d\n", 
+// 			ft_printf("Hexadecimal: %x\n", 255), 
+				// printf("Hexadecimal: %x\n", 255));
+//     printf("Test Case 8 - ft_printf: %d, printf: %d\n", 
+// 			ft_printf("Uppercase Hexadecimal: %X\n", 255), 
+			// printf("Uppercase Hexadecimal: %X\n", 255));
+//     printf("Test Case 9 - ft_printf: %d, printf: %d\n", 
+// 			ft_printf("Percent sign: %%\n"), printf("Percent sign: %%\n"));
+
+//     return 0;
+// }

@@ -6,7 +6,7 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/06 14:32:58 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/13 16:11:26 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/13 18:17:42 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int	print_str(char *str)
 	len = 0;
 	if (str == NULL)
 	{
-		ft_putstr_fd(("null"), 1);
-		return (4);
+		ft_putstr_fd("(null)", 1);
+		return (6);
 	}
 	while (str[len])
 		ft_putchar_fd(str[len++], 1);

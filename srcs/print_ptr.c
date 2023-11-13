@@ -6,12 +6,13 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/09 14:53:21 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/13 16:16:08 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/13 16:31:36 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
+#include <stdio.h>
 
 /**
 * @notice	This function counts the lenght of a pointer.
@@ -66,11 +67,12 @@ int	print_ptr(unsigned long long ptr)
 {
 	int	len;
 
-	len = 0;
-	len += write(1, "0x", 2);
+	len = 2;
+	ft_putstr_fd("0x", 1);
 	if (ptr == 0)
 	{
-		len += write(1, "0", 1);
+		ft_putchar_fd('0', 1);
+		len++;
 	}
 	else
 	{
