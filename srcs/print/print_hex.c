@@ -6,12 +6,11 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/09 16:09:12 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/09 17:49:56 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/13 15:11:16 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 /**
 * @notice	This function counts the lenght of an unsigned integer number converted
@@ -57,7 +56,6 @@ void	put_hex(unsigned int num, const char conversion)
 			ft_putchar_fd((num - 10 + 'A'), 1);
 	}
 }
-
 
 /**
 * @notice	This function checks an unsigned integer number, converts it into
