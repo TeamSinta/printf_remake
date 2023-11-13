@@ -6,7 +6,7 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/01 12:08:05 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/13 15:15:57 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/13 16:11:02 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int	arg_conversion(va_list args, const char conversion)
 	return (len);
 }
 
-
 int	ft_printf(const char *str, ...)
 {
 	int		i;
@@ -44,9 +43,7 @@ int	ft_printf(const char *str, ...)
 
 	i = 0;
 	len = 0;
-
 	va_start(args, str);
-
 	while (str[i])
 	{
 		if (str[i] == '%')

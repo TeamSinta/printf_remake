@@ -6,16 +6,16 @@
 #    By: mshegow <mshegow@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/11/13 16:06:36 by mshegow       #+#    #+#                  #
-#    Updated: 2023/11/13 16:07:09 by mshegow       ########   odam.nl          #
+#    Updated: 2023/11/13 16:13:23 by mshegow       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 #Variables
 
 NAME		= libftprintf.a
-INCLUDE		= include
+INCLUDE		= includes
 LIBFT		= libft
-SRC_DIR		= src/
+SRC_DIR		= srcs/
 OBJ_DIR		= obj/
 CC			= gcc
 CFLAGS		= -Wall -Werror -Wextra -I
@@ -36,7 +36,7 @@ WHITE = \033[0;97m
 
 #Sources
 
-SRC_FILES	=	ft_printf ft_printf_utils ft_print_ptr ft_print_unsigned ft_print_hex
+SRC_FILES	=	ft_printf print_hex print_str print_unsigned print_hex print_nbr print_ptr
 
 
 SRC 		= 	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))

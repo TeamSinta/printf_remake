@@ -6,7 +6,7 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/09 14:54:16 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/13 15:42:46 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/13 16:11:49 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,14 @@ char	*ft_unsigned_itoa(unsigned int n)
 	return (num);
 }
 
-
 int	print_unsigned(unsigned int i)
 {
 	int		len;
 	char	*numchar;
 
 	len = 0;
-
 	if (i == 0)
 	{
-
 		ft_putchar_fd('0', 1);
 		len++;
 	}

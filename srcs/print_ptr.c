@@ -6,7 +6,7 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/09 14:53:21 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/13 15:43:17 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/13 16:16:08 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,11 @@ int	print_ptr(unsigned long long ptr)
 {
 	int	len;
 
-	len = 2;
-	ft_putnbr_fd("0x", 1);
+	len = 0;
+	len += write(1, "0x", 2);
 	if (ptr == 0)
 	{
-		ft_putchar_fd('0', 1);
-		len++;
+		len += write(1, "0", 1);
 	}
 	else
 	{
