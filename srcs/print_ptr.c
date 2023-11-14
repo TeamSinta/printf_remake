@@ -6,7 +6,7 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/09 14:53:21 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/14 18:09:50 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/14 18:12:24 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 #include <stdio.h>
 
 /**
-* @notice	This function counts the lenght of a pointer.
-* @param	uintptr_t			The unsigned integer pointer to count lenght.
+* This function counts the lenght of a pointer.
 * @return	int					The lenght of characters of the pointer.
 */
 
@@ -35,7 +34,6 @@ int	ptr_len(unsigned long num)
 
 /**
 * @notice	This function converts a pointer.
-* @param	uintptr_t			The unsigned integer pointer to print.
 * @return	void				No return value needed now.
 */
 
