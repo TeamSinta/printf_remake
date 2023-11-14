@@ -6,7 +6,7 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/13 18:00:18 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/13 18:30:35 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/14 17:27:38 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # define __CONVERTER "cspdiuxX%"
 
 int			ft_printf(const char *str, ...);
-int			print_hex(unsigned int num, const char conversion);
+int			print_hex(unsigned int num, const char format);
 int			print_nbr(int num);
 int			print_ptr(unsigned long long ptr);
 int			print_str(char *str);

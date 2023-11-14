@@ -6,7 +6,7 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/09 14:54:16 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/13 16:11:49 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/14 17:26:13 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,54 +14,28 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	ft_num_len(unsigned	int num)
+static void	printout(unsigned int nb)
 {
-	int	len;
-
-	len = 0;
-	while (num != 0)
+	if (nb > 9)
+		print_unsigned(nb / 10);
+	if (nb <= 9)
 	{
-		len++;
-		num = num / 10;
+		ft_putchar_fd(nb + 48, 1);
+		return ;
 	}
-	return (len);
+	ft_putchar_fd((nb % 10) + 48, 1);
 }
 
-char	*ft_unsigned_itoa(unsigned int n)
+int	print_unsigned(unsigned int nb)
 {
-	char	*num;
-	int		len;
+	unsigned int	i;
 
-	len = ft_num_len(n);
-	num = (char *)malloc(sizeof(char) * (len + 1));
-	if (!num)
-		return (0);
-	num[len] = '\0';
-	while (n != 0)
+	printout(nb);
+	i = 1;
+	while (nb > 9)
 	{
-		num[len - 1] = n % 10 + 48;
-		n = n / 10;
-		len--;
+		nb = nb / 10;
+		i++;
 	}
-	return (num);
-}
-
-int	print_unsigned(unsigned int i)
-{
-	int		len;
-	char	*numchar;
-
-	len = 0;
-	if (i == 0)
-	{
-		ft_putchar_fd('0', 1);
-		len++;
-	}
-	else
-	{
-		numchar = ft_unsigned_itoa(i);
-		len += print_str(numchar);
-		free(numchar);
-	}
-	return (len);
+	return (i);
 }
