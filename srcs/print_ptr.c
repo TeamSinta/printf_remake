@@ -6,7 +6,7 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/09 14:53:21 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/14 18:12:24 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/11/14 18:13:01 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ptr_len(unsigned long num)
 }
 
 /**
-* @notice	This function converts a pointer.
+* This function converts a pointer.
 * @return	void				No return value needed now.
 */
 
@@ -54,7 +54,7 @@ void	put_ptr(unsigned long num)
 }
 
 /**
-* @notice	This function checks the pointer of something, converts it, prints
+*This function checks the pointer of something, converts it, prints
 *			it and counts its pointer lenght.
 * @param	unsigned_long_long	The unsigned integer pointer to print.
 * @return	int					The lenght of characters of the printed
