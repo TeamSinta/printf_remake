@@ -6,13 +6,17 @@
 /*   By: mshegow <mshegow@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/09 16:09:12 by mshegow       #+#    #+#                 */
-/*   Updated: 2023/11/14 17:27:25 by mshegow       ########   odam.nl         */
+/*   Updated: 2023/12/04 16:34:43 by mshegow       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
+/**
+* calculates the length of the hexadecimal representation of an unsigned num.
+* @return	int					The lenght of characters of the pointer.
+*/
 int	ft_hex_len(unsigned	int num)
 {
 	int	len;
@@ -25,6 +29,14 @@ int	ft_hex_len(unsigned	int num)
 	}
 	return (len);
 }
+
+/**
+* recursive function that prints the hexadecimal representation of an unsigned
+* num. 
+* if num is greater than 9, it checks the format argument. 
+* if format is 'x', it prints the corresponding lowercase hexadecimal character; 
+* if format is 'X', it prints the corresponding uppercase hexadecimal character.
+*/
 
 void	ft_put_hex(unsigned int num, const char format)
 {
@@ -46,6 +58,11 @@ void	ft_put_hex(unsigned int num, const char format)
 		}
 	}
 }
+
+/**
+* prints the hexadecimal representation of an unsigned integer num.
+* @return	int					The lenght of characters of the hex.
+*/
 
 int	print_hex(unsigned int num, const char format)
 {
